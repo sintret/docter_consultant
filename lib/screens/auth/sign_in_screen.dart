@@ -1,6 +1,7 @@
 import 'package:docter_consultant/screens/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:docter_consultant/screens/welcome/welcome_screen.dart';
 
 import '../../constants.dart';
 import 'components/sign_in_form.dart';
@@ -67,6 +68,13 @@ class SignInScreen extends StatelessWidget {
                             // It saved our inputs
                             _formKey.currentState!.save();
                             //  Sign in also done
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => WelcomeScreen(),
+                              ),
+                            );
                           }
                         },
                         child: Text("Sign In"),
